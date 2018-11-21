@@ -1,6 +1,20 @@
 package com.example.daniel.evidenciafinal;
 
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.os.Parcelable;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Spinner;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity  {
 
@@ -14,11 +28,11 @@ public class MainActivity extends AppCompatActivity  {
 
     {
         Cliente b = new Cliente(null);
-        b.nombre = ((EditText)findViewById(R.id.editText2)).getText().toString();
-        b.apellidoma = ((EditText)findViewById(R.id.editText4)).getText().toString();
-        b.apellidopa = ((EditText)findViewById(R.id.editText3)).getText().toString();
-        b.nacionalidad = ((EditText)findViewById(R.id.editText5)).getText().toString();
-        b.estado = ((Spinner)findViewById(R.id.spinner)).getSelectedItem().toString();
+        b.Nombre = ((EditText)findViewById(R.id.editText2)).getText().toString();
+        b.ApellidoMaterno = ((EditText)findViewById(R.id.editText4)).getText().toString();
+        b.ApellidoPaterno = ((EditText)findViewById(R.id.editText3)).getText().toString();
+        b.Nacionalidad = ((EditText)findViewById(R.id.editText5)).getText().toString();
+        b.Estado = ((Spinner)findViewById(R.id.spinner)).getSelectedItem().toString();
         b.sexo = ((RadioButton)findViewById(((RadioGroup)findViewById(R.id.radioGroup2)).getCheckedRadioButtonId())).getText().toString();
 
 

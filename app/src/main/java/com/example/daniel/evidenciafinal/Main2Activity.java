@@ -1,15 +1,12 @@
 package com.example.daniel.evidenciafinal;
 
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 public class Main2Activity extends AppCompatActivity {
@@ -22,12 +19,12 @@ public class Main2Activity extends AppCompatActivity {
         Intent intent = getIntent();
         Cliente user = intent.getParcelableExtra("user");
 
-        ((TextView) findViewById(R.id.a)).setText(user.nombre);
-        ((TextView) findViewById(R.id.b)).setText(user.apellidopa);
-        ((TextView) findViewById(R.id.c)).setText(user.apellidoma);
+        ((TextView) findViewById(R.id.a)).setText(user.Nombre);
+        ((TextView) findViewById(R.id.b)).setText(user.ApellidoPaterno);
+        ((TextView) findViewById(R.id.c)).setText(user.ApellidoMaterno);
         ((TextView) findViewById(R.id.d)).setText(user.sexo);
-        ((TextView) findViewById(R.id.e)).setText(user.nacionalidad);
-        ((TextView) findViewById(R.id.f)).setText(user.estado);
+        ((TextView) findViewById(R.id.e)).setText(user.Nacionalidad);
+        ((TextView) findViewById(R.id.f)).setText(user.Estado);
 
 
     }

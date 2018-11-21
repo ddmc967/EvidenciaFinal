@@ -1,42 +1,41 @@
 package com.example.daniel.evidenciafinal;
 
 import android.os.Parcel;
-import android.os.Parcelable;
 
 public class Cliente {
-    public String nombre;
-    public String apellidopa;
-    public String apellidoma;
-    public String nacionalidad;
+    public String Nombre;
+    public String ApellidoPaterno;
+    public String ApellidoMaterno;
+    public String Nacionalidad;
     public String sexo;
-    public String estado;
+    public String Estado;
 
     public Cliente(String nombre, String apellidopa,
                    String apellidoma,
                    String nacionalidad, String sexo,
                    String estado) {
-        this.nombre = nombre;
-        this.apellidopa = apellidopa;
-        this.apellidoma = apellidoma;
-        this.nacionalidad = nacionalidad;
+        this.Nombre = nombre;
+        this.ApellidoPaterno = apellidopa;
+        this.ApellidoMaterno = apellidoma;
+        this.Nacionalidad = nacionalidad;
         this.sexo = sexo;
-        this.estado = estado;
+        this.Estado = estado;
     }
 
-    public String a() {return nombre; }
-    public String e () {return apellidopa; }
-    public String i () {return apellidoma; }
-    public String p   () {return nacionalidad; }
+    public String a() {return Nombre; }
+    public String e () {return ApellidoPaterno; }
+    public String i () {return ApellidoMaterno; }
+    public String p   () {return Nacionalidad; }
     public String f() {return sexo; }
-    public String n () {return estado; }
+    public String n () {return Estado; }
 
     protected Cliente() {
-        nombre= in.readString();
-        apellidopa = in.readString();
-        apellidoma = in.readString();
-        nacionalidad = in.readString();
+        Nombre = in.readString();
+        ApellidoPaterno = in.readString();
+        ApellidoMaterno = in.readString();
+        Nacionalidad = in.readString();
         sexo = in.readString();
-        estado = in.readString();
+        Estado = in.readString();
     }
 
     public int describeContents() {
@@ -44,12 +43,12 @@ public class Cliente {
     }
 
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(nombre);
-        dest.writeString(apellidopa);
-        dest.writeString(apellidoma);
-        dest.writeString(nacionalidad);
+        dest.writeString(Nombre);
+        dest.writeString(ApellidoPaterno);
+        dest.writeString(ApellidoMaterno);
+        dest.writeString(Nacionalidad);
         dest.writeString(sexo);
-        dest.writeString(estado);
+        dest.writeString(Estado);
     }
 
     public void nombre(String string) {
